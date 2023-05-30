@@ -5,7 +5,7 @@ ventana = Tk()
 
 frame = Frame(ventana)
 frame.pack()
-ventana.title("Proyecto")#El titulo modificado
+ventana.title("Proecto")#El titulo modificado
 
 ventana.geometry("900x600")#Dimension 
 
