@@ -30,22 +30,22 @@ frame_1.config(relief = SUNKEN)
 #------------------boton con mensaje----------------------------------------------------------------------------------
 
 def boton_inicio():
-    msg = messagebox.showinfo("HOLA", "LO SIENTO EL PROGRAMA AUN NO ESTA LISTO")#cuadrado de texto para mostrar
+    msg = messagebox.showinfo("HOLA", "LO SIENTO EL PROGRAMA AÚN NO ESTÁ LISTO")#cuadrado de texto para mostrar
 
-boton = Button(ventana, text = "INICIO", command = boton_inicio, bg = "powder blue")#BOTON
+boton = Button(ventana, text = "INICIAR", command = boton_inicio, bg = "powder blue")#BOTON
 boton.config(relief="sunken")
 boton.pack()
 boton.place(x = 90, y = 50, width = 120, height = 60)#Pocision del boton
 
 #-------------------botones sin mensaje--------------------------------------------------------------
 botonrojo = Button(ventana, text = "ROJO", fg = "red")
-botonrojo.place(x = 100, y = 400, width = 90, height = 50)
+botonrojo.place(x = 80, y = 400, width = 150, height = 50)
 
 botonazul = Button(ventana, text = "AZUL", fg = "blue")
-botonazul.place(x = 100, y = 350, width = 90, height = 50)
+botonazul.place(x = 80, y = 350, width = 150, height = 50)
 
 botonnegro = Button(ventana, text = "NEGRO", fg = "black")
-botonnegro.place(x = 100, y = 300, width = 90, height = 50)
+botonnegro.place(x = 80, y = 300, width = 150, height = 50)
 
 #---------------------------FRAME 2--------------------------------------------------------
 
@@ -76,14 +76,6 @@ frame_3.pack(side = TOP)
 frame_3.config(border = "15")
 
 frame_3.config(relief = SUNKEN)
-
-
-
-
-
-
-
-
 
 
 
