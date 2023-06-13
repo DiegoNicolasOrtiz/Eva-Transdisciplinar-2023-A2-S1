@@ -44,7 +44,7 @@ def start_simulation():
             if event.type == QUIT:
                 running = False
 
-        surface.fill((0, 0, 0))
+        surface.fill((255, 255, 255))
 
         # Actualizar y dibujar la simulación
         simulation.update(1 / FPS)
