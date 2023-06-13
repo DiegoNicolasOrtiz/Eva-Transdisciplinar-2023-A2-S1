@@ -108,10 +108,10 @@ class MRUASimulation:
         self.time += dt
 
 # Función para dibujar la tabla gráfica en pygame
-def draw_graph(ventana, simulation):
-    pygame.draw.line(ventana, (0, 0, 0), (0, 450), (WIDTH, 450), 2)
-    pygame.draw.line(ventana, (0, 0, 0), (WIDTH // 4, 0), (WIDTH // 4, HEIGHT), 2)
-    pygame.draw.circle(ventana, (255, 0, 0), (WIDTH // 4 + int(simulation.time*100), 450 + int(simulation.positiony)), 5)
+def draw_graph(surface, simulation):
+    pygame.draw.line(surface, (0, 0, 0), (0, 450), (WIDTH, 450), 2)
+    pygame.draw.line(surface, (0, 0, 0), (WIDTH // 4, 0), (WIDTH // 4, HEIGHT), 2)
+    pygame.draw.circle(surface, (255, 0, 0), (WIDTH // 4 + int(simulation.time*100), 450 + int(simulation.positiony)), 5)
 
 # Función para iniciar la simulación
 def start_simulation():
@@ -122,7 +122,7 @@ def start_simulation():
     # Configuración de la ventana de pygame
     pygame.init()
     clock = pygame.time.Clock()
-    ventana = pygame.display.get_surface()
+    surface = pygame.display.set_mode((WIDTH, HEIGHT))
     pygame.display.set_caption("Simulación de Movimiento Rectilíneo Uniformemente Acelerado")
 
     running = True
@@ -131,10 +131,11 @@ def start_simulation():
             if event.type == QUIT:
                 running = False
 
+        surface.fill((255, 255, 255))
 
         # Actualizar y dibujar la simulación
         simulation.update(1 / FPS)
-        draw_graph(ventana, simulation)
+        draw_graph(surface, simulation)
 
         pygame.display.flip()
         clock.tick(FPS)
@@ -145,13 +146,6 @@ boton_inicio = Button(ventana, text = "Iniciar Simulación", command = start_sim
 boton_inicio.config(relief=SUNKEN)
 boton_inicio.pack()
 boton_inicio.place(x = 90, y = 270, width = 120, height = 60)#Pocision del boton
-
-
-
-
-
-
-
 
 
 ventana.mainloop()
