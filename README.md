@@ -2,9 +2,9 @@
 
 
 **Integrantes:**
-Diego Ortiz
-Débora Vizama
-Marcelo Vidal
+-Diego Ortiz
+-Débora Vizama
+-Marcelo Vidal
 
 
 ## Descripción
