@@ -1,5 +1,6 @@
 from tkinter import *
 from tkinter import messagebox
+import tkinter
 import matplotlib 
 import pygame
 from pygame.locals import *
@@ -87,6 +88,9 @@ frame_3.config(border = "15")
 
 frame_3.config(relief = SUNKEN)
 
+canvas_simulation = tkinter.Canvas(ventana, width=400, height=450, bg="black")
+canvas_simulation.pack(pady=10)
+canvas_simulation.place(x=300, y=10)
 #--------------------------------------------pygame--------------------------------------------------
 
 # Configuración de la ventana de pygame
@@ -189,6 +193,5 @@ boton_inicio = Button(ventana, text = "Iniciar Simulación", command = start_sim
 boton_inicio.config(relief=SUNKEN)
 boton_inicio.pack()
 boton_inicio.place(x = 90, y = 270, width = 160, height = 60)#Pocision del boton
-
 
 ventana.mainloop()
