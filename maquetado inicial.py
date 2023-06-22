@@ -1,74 +1,114 @@
-# se importan las librerias
 from tkinter import *
+from tkinter import messagebox
+import tkinter
 import matplotlib.pyplot as plt
 import pygame
 from pygame.locals import *
 from PIL import Image, ImageTk
 
-# Configuración de la ventana de pygame
-WIDTH, HEIGHT = 800, 600
+WIDTH, HEIGHT = 665, 435
 FPS = 60
 tiempo_simulacion = 10
-#---------------------------------------------------------------------------
-#Creación de la ventana principal
+#--------------------------------------tkinter---------------------------------------------------------------------
+pygame.init()
 
 ventana = Tk()
-ventana.title("Simulación de Movimiento Rectilíneo Uniformemente Acelerado")
-ventana.geometry("1500x1000")
-ventana.config(bg="RoyalBlue4")
 
-#Creación y configuración de los marcos (frames)
-frame_1 = Frame(ventana, bg="steel blue", width="400", height="1000")
-frame_1.pack(side=LEFT)
-frame_1.config(border="18", relief=SUNKEN)
+frame = Frame(ventana)
+frame.pack()
+ventana.title("Proyecto")#El titulo modificado
+
+ventana.geometry("1150x800")#Dimension 
+
+ventana.config(bg="RoyalBlue4")#Color de fondo
 
 
-frame_2 = Frame(ventana, bg="SteelBlue4", width="1300", height="1000")
-frame_2.pack(side=TOP)
-frame_2.config(border="18", relief=SUNKEN)
+#---------------------------frame1----------------------------------------------------
+frame_1 = Frame(ventana)
+frame_1.pack()
 
-#Creación de etiquetas (labels) y campos de entrada (entry)
-label_ecuacion = Label(frame_2, text=" x = x₀ + v₀t + (1/2)at² ", bg="orange")
-label_ecuacion.pack()
-label_ecuacion.place(x=10, y=590)
+frame_1.config(bg = "steel blue")
 
-label_texto = Label(frame_1, text = """Movimiento Rectilíneo Uniformemente Acelerado
+frame_1.config(width ="300", height ="300")    
+
+frame_1.place(x=30, y=200)
+
+frame_1.config(border = "15")
+
+frame_1.config(relief = SUNKEN)
+#---------------------------FRAME 2-------------------------------------------------------------------------
+
+frame_2 = Frame(ventana)
+frame_2.pack()
+
+frame_2.config(bg = "steel blue")
+
+frame_2.config(width ="450", height ="100")    
+
+frame_2.place(x=510, y=520)
+
+frame_2.config(border = "15")
+
+frame_2.config(relief = SUNKEN)
+#-----------------------------------Labels Aceleracion y Velocidad Inicial----------------------------------------------------------
+
+label_texto = Label(ventana, text = """Movimiento Rectilíneo Uniformemente Acelerado
 (MRUA)""")
 label_texto.pack()
-label_texto.place(x=35, y=40)
+label_texto.config(border = "7")
+label_texto.config(relief = SUNKEN)
+label_texto.place(x=47, y=95)
 
-#Creación de etiquetas (labels) y campos de entrada (entry)
-label_velocidad = Label(frame_1, text="Velocidad Inicial: ", bg="steel blue")
+label_texto = Label(frame_2, text = """    x = x₀ + v₀t + (1/2)at² 
+(MRUA)""")
+label_texto.pack()
+label_texto.config(border = "7")
+label_texto.config(relief = SUNKEN)
+label_texto.place(x=200, y=5)
+
+label_velocidad = Label(ventana, text = "Velocidad Inicial: ", bg="steel blue")
 label_velocidad.pack()
-label_velocidad.place(x=35, y=200)
+label_velocidad.place(x=55, y=300)
 
-label_aceleracion = Label(frame_1, text="Aceleracion: ", bg="steel blue")
+label_aceleracion = Label(ventana, text = "Aceleración: ", bg="steel blue")
 label_aceleracion.pack()
-label_aceleracion.place(x=57, y=160)
+label_aceleracion.place(x=77, y=260)
 
-entry_velocidad = Entry(frame_1)
+#----------------------------Entrys--------------------------------------------------------------
+
+entry_velocidad = Entry(ventana)
 entry_velocidad.pack()
-entry_velocidad.place(x=130, y=200)
+entry_velocidad.place(x=150, y=300)
 
-aceleracion_entry = Entry(frame_1)
+aceleracion_entry = Entry(ventana)
 aceleracion_entry.pack()
-aceleracion_entry.place(x=130, y=160)
+aceleracion_entry.place(x=150, y=260)
 
 
 
-position_label = Label(frame_2, text='Posición: 0')
-position_label.pack()
-position_label.place(x=10, y=620)
+#--------------------------------Frame 3--------------------------------------------------------
 
-time_label = Label(frame_2, text='Tiempo: 0')
-time_label.pack()
-time_label.place(x=10, y=650)
+frame_3 = Frame(ventana)
+frame_3.pack()
 
-#actualizacion de los labels
-def update_labels(position, time):
-    position_label.config(text=f'Posición: {position}')
-    time_label.config(text=f'Tiempo: {time}')
+frame_3.config(bg = "SteelBlue4")
 
+frame_3.config(width ="700", height ="470")    
+
+frame_3.place(x=370, y=30)
+
+frame_3.config(border = "15")
+
+frame_3.config(relief = SUNKEN)
+
+label = tkinter.Label(ventana)
+label.place(x=385, y=45)
+
+#--------------------------------------------pygame--------------------------------------------------
+
+# Configuración de la ventana de pygame
+
+# Clase para la simulación del movimiento
 class MRUASimulation:
     def __init__(self, initial_velocity, acceleration):
         self.initial_velocity = initial_velocity
@@ -78,13 +118,16 @@ class MRUASimulation:
         self.positiony = 0
 
     def update(self, dt):
-        self.position = self.initial_velocity * self.time + 0.5 * self.acceleration * self.time
-        self.positiony = -1 * (self.initial_velocity * self.time + 0.5 * self.acceleration * self.time ** 3)
+        self.position = self.initial_velocity * self.time + 0.5 * self.acceleration * self.time**2
+        self.positiony = -1*(self.initial_velocity * self.time + 0.5 * self.acceleration * self.time**2)
         self.position_g = 1 * (self.initial_velocity * self.time + 0.5 * self.acceleration * self.time ** 3)
+
         self.time += dt
 
+simulation = MRUASimulation(0, 0)
 # Función para dibujar la tabla gráfica en pygame
 def draw_graph(surface, simulation):
+    surface.fill((0, 0, 0))
     pygame.draw.line(surface, (130, 160, 200), (WIDTH // 4 - 30, 0), (WIDTH // 4 - 30, HEIGHT), 1)
     pygame.draw.line(surface, (130, 160, 200), (WIDTH // 4 - 60, 0), (WIDTH // 4 - 60, HEIGHT), 1)
     pygame.draw.line(surface, (130, 160, 200), (WIDTH // 4 - 90, 0), (WIDTH // 4 - 90, HEIGHT), 1)
@@ -129,43 +172,37 @@ def draw_graph(surface, simulation):
     pygame.draw.line(surface, (130, 160, 200), (0, HEIGHT//2 - 210), (WIDTH, HEIGHT//2 - 210), 1)
     pygame.draw.line(surface, (130, 160, 200), (0, HEIGHT//2 - 240), (WIDTH, HEIGHT//2 - 240), 1)
     pygame.draw.line(surface, (130, 160, 200), (0, HEIGHT//2 - 270), (WIDTH, HEIGHT//2 - 270), 1)
-    pygame.draw.line(surface, (255, 255, 255), (0, 450), (WIDTH, 450), 3)
+    pygame.draw.line(surface, (255, 255, 255), (0, 330), (WIDTH, 330), 3)
     pygame.draw.line(surface, (255, 255, 255), (WIDTH // 4, 0), (WIDTH // 4, HEIGHT), 3)
-    pygame.draw.circle(surface, (255, 0, 0), (WIDTH // 4 + int(simulation.time*100), 450 + int(simulation.positiony)), 5)
+    pygame.draw.circle(surface, (255, 0, 0), (WIDTH // 4 + int(simulation.time)*30, 330 + int(simulation.positiony)), 5)
 
+    pygame_image = pygame.image.tostring(surface, 'RGB')
+    image = Image.frombytes('RGB', surface.get_size(), pygame_image)
+    photo = ImageTk.PhotoImage(image)
+    label.config(image=photo)
+    label.image = photo
 
-# Función para iniciar la simulación en pygame
+def iniciar():
+    
+    initial_velocity = float(entry_velocidad.get())
+    acceleration = float(aceleracion_entry.get())
+    simulation.acceleration = acceleration
+    simulation.initial_velocity = initial_velocity
+    simulation.update(1)
+    print(simulation.time)
+    surf = pygame.Surface((WIDTH,HEIGHT))
+    draw_graph(surf, simulation)
+    # Programar la próxima actualización
+    ventana.after(5000//15, iniciar)
+
+# Función para iniciar la simulación
 def start_simulation():
     initial_velocity = float(entry_velocidad.get())
     acceleration = float(aceleracion_entry.get())
-    simulation = MRUASimulation(initial_velocity, acceleration)
-    
-    pygame.init()
-    clock = pygame.time.Clock()
-    surface = pygame.display.set_mode((WIDTH, HEIGHT))
-    pygame.display.set_caption("Simulación de Movimiento Rectilíneo Uniformemente Acelerado")
+    surf = pygame.Surface((WIDTH,HEIGHT))
 
-    running = True
-    while running:
-        for event in pygame.event.get():
-            if event.type == QUIT:
-                running = False
-
-        surface.fill((0, 0, 0))
-
-        simulation.update(1 / FPS)
-        draw_graph(surface, simulation)
-
-        pygame.display.flip()
-        clock.tick(FPS)
-
-        elapsed_time = simulation.time
-        update_labels(simulation.position, elapsed_time)
-
-        if elapsed_time >= tiempo_simulacion:
-            running = False
-
-    pygame.quit()    
+    # Configuración de la ventana de pygame
+    iniciar()
 
 def crear_grafico(posicion, tiempo):
     plt.plot(tiempo, posicion)
@@ -190,14 +227,16 @@ def mostrar_grafico():
 
     crear_grafico(positions, times)
 
-boton_inicio = Button(frame_1, text="INICIO", command=start_simulation, bg="powder blue")
+#Boton para iniciar la simulación
+boton_inicio = Button(ventana, text = "Iniciar Simulación", command = start_simulation, bg = "powder blue")#BOTON
 boton_inicio.config(relief=SUNKEN)
 boton_inicio.pack()
-boton_inicio.place(x=90, y=300, width=120, height=60)
+boton_inicio.place(x = 100, y = 370, width = 160, height = 60)#Pocision del boton
 
-boton_grafico = Button(frame_1, text="Mostrar Gráfico", command=mostrar_grafico, bg="powder blue")
+#Boton para el grafico
+boton_grafico = Button(ventana, text="Mostrar Gráfico", command=mostrar_grafico, bg="powder blue")
 boton_grafico.config(relief=SUNKEN)
 boton_grafico.pack()
-boton_grafico.place(x=90, y=400, width=120, height=60)
+boton_grafico.place(x=600, y=545, width=120, height=50)
 
 ventana.mainloop()
