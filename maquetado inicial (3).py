@@ -1,14 +1,14 @@
 from tkinter import *
 from tkinter import messagebox
 import tkinter
-import matplotlib 
+import matplotlib.pyplot as plt
 import pygame
 from pygame.locals import *
 from PIL import Image, ImageTk
 
 WIDTH, HEIGHT = 665, 435
 FPS = 60
-
+tiempo_simulacion = 10
 #--------------------------------------tkinter---------------------------------------------------------------------
 pygame.init()
 
@@ -36,7 +36,20 @@ frame_1.place(x=30, y=200)
 frame_1.config(border = "15")
 
 frame_1.config(relief = SUNKEN)
+#---------------------------FRAME 2-------------------------------------------------------------------------
 
+frame_2 = Frame(ventana)
+frame_2.pack()
+
+frame_2.config(bg = "steel blue")
+
+frame_2.config(width ="450", height ="100")    
+
+frame_2.place(x=510, y=520)
+
+frame_2.config(border = "15")
+
+frame_2.config(relief = SUNKEN)
 #-----------------------------------Labels Aceleracion y Velocidad Inicial----------------------------------------------------------
 
 label_texto = Label(ventana, text = """Movimiento Rectilíneo Uniformemente Acelerado
@@ -46,6 +59,12 @@ label_texto.config(border = "7")
 label_texto.config(relief = SUNKEN)
 label_texto.place(x=47, y=95)
 
+label_texto = Label(frame_2, text = """    x = x₀ + v₀t + (1/2)at² 
+(MRUA)""")
+label_texto.pack()
+label_texto.config(border = "7")
+label_texto.config(relief = SUNKEN)
+label_texto.place(x=200, y=5)
 
 label_velocidad = Label(ventana, text = "Velocidad Inicial: ", bg="steel blue")
 label_velocidad.pack()
@@ -65,20 +84,7 @@ aceleracion_entry = Entry(ventana)
 aceleracion_entry.pack()
 aceleracion_entry.place(x=150, y=260)
 
-#---------------------------FRAME 2-------------------------------------------------------------------------
 
-frame_2 = Frame(ventana)
-frame_2.pack()
-
-frame_2.config(bg = "SteelBlue4")
-
-frame_2.config(width ="450", height ="100")    
-
-frame_2.place(x=510, y=520)
-
-frame_2.config(border = "15")
-
-frame_2.config(relief = SUNKEN)
 
 #--------------------------------Frame 3--------------------------------------------------------
 
@@ -112,10 +118,10 @@ class MRUASimulation:
         self.positiony = 0
 
     def update(self, dt):
-        self.position = self.initial_velocity * self.time + 0.5 * self.acceleration * self.time**2
         self.positiony = -1*(self.initial_velocity * self.time + 0.5 * self.acceleration * self.time**2)
+        self.position_g = 1 * (self.initial_velocity * self.time + 0.5 * self.acceleration * self.time **2)
         self.time += dt
-        if self.positiony > 500 or self.time > 23 or self.positiony < -500:
+        if self.positiony > 500 or self.time > 20 or self.positiony < -500:
             self.positiony = 0
             self.time = 0
 
@@ -185,7 +191,6 @@ def iniciar():
     simulation.initial_velocity = initial_velocity
     simulation.update(1)
     print(simulation.time)
-    print(simulation.positiony)
     surf = pygame.Surface((WIDTH,HEIGHT))
     draw_graph(surf, simulation)
     # Programar la próxima actualización
@@ -200,9 +205,40 @@ def start_simulation():
     # Configuración de la ventana de pygame
     iniciar()
 
+def crear_grafico(posicion, tiempo):
+    plt.plot(tiempo, posicion)
+    plt.xlabel('Tiempo (s)')
+    plt.ylabel('Posición (m)')
+    plt.title('Simulación de Movimiento Rectilíneo Uniforme Acelerado')
+    plt.grid(True)
+    plt.show()
+
+def mostrar_grafico():
+    velocidad_inicial = float(entry_velocidad.get())
+    aceleracion = float(aceleracion_entry.get())
+    simulation = MRUASimulation(velocidad_inicial, aceleracion)
+
+    positions = []
+    times = []
+
+    while simulation.time < tiempo_simulacion:
+        simulation.update(1)
+        positions.append(simulation.position_g)
+        times.append(simulation.time)
+    print(positions)
+    print(times)
+    crear_grafico(positions, times)
+
+#Boton para iniciar la simulación
 boton_inicio = Button(ventana, text = "Iniciar Simulación", command = start_simulation, bg = "powder blue")#BOTON
 boton_inicio.config(relief=SUNKEN)
 boton_inicio.pack()
 boton_inicio.place(x = 100, y = 370, width = 160, height = 60)#Pocision del boton
+
+#Boton para el grafico
+boton_grafico = Button(ventana, text="Mostrar Gráfico", command=mostrar_grafico, bg="powder blue")
+boton_grafico.config(relief=SUNKEN)
+boton_grafico.pack()
+boton_grafico.place(x=600, y=545, width=120, height=50)
 
 ventana.mainloop()
