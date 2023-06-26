@@ -17,9 +17,13 @@ Este es nuestro proyecto de Física y Programación 1, una simulación con inter
   
   
 
-## Sobre el Evento Físico
+## Evento Físico a Simular
+
+# Origen
 
 La persona que descubrió el **MRUA** fue el gran matemático *Galileo Galilei*, logrando evidenciarlo mediante diversos experimentos (con bolas cayendo desde pendientes y dejando caer objetos desde la torre de pizza). Le fue de gran dificultad que su entorno social entendiera esto, ya que aunque la teoría que había hecho Aristóteles acerca de la caída libre era duramente criticada, ésta era fuertemente apoyada por la iglesia, lo que le causó varias discusiones al respecto a Galilei. Él consideraba que era mas importante describir el movimiento que averiguar sus causas, y se concentró en encontrar los principios matemáticos que explicaran lo que hoy en día llamamos movimiento uniformemente acelerado.
+
+# Matemática Empleada
 
 Consiste básicamente en el cambio constante de la velocidad de un cuerpo en movimiento. Puede ser un auto acelerando, una pelota cayendo, etc. Cada segundo (**t**), el objeto en cuestión tendrá una posición (**x**) y velocidad (**v**) distintas, dando lugar a una recopilación de datos fascinante para los interesados en la física y matemática.
 Debido a la cantidad de variables que están presentes en el evento físico, existen varias fórmulas que ayudan a calcular datos matemáticos para el trabajo, siendo las principales:
@@ -28,11 +32,15 @@ La posición del cuerpo en movimiento es clave en el proceso, porque ésta es co
 Teniendo sobre todo el foco en la *aceleración* (**a**) en cada expresión, ya que es la principal causante del fenómeno, y agrega la parte "Acelerado" a su nombre. La aceleración provoca que la velocidad cambie cada instante del proceso en movimiento del cuerpo, siendo un concepto realmente conocido cuando nos referimos a esa modificación de rapidez. La propia gravedad de la Tierra cuenta como una aceleración a la que somos sometidos en todo momento, correspondiendo a 9.8 metros partidos por segundos al cuadrado.
 Cabe destacar que esta matemática enseñada es usada incluso en nuestro código para simular el proceso físico.
 
+# ¿Cómo se resuelve?
+
 Si tuviéramos que dar una solución a cómo resolver en sí la ecuación y proceso, sería averiguar la aceleración en la fórmula, la cual, es constante en este fenómeno, cada segundo siempre aumentará o disminuirá (La seguimos tratando cómo aceleración en términos correctos, ya que sigue siendo un cambio de la rapidez) a la velocidad en una misma cantidad. Con esta información, podemos obtenerla dividiendo la variación de la velocidad (**Δv**) por la variación del tiempo (**Δt**). Es de importancia considerar que, gracias a que la aceleración nunca cambia en este proceso, simular los datos tomados sería ir de cuesta arriba, literalmente. Si la velocidad aumenta y aumenta (Si disminuye eventualmente el cuerpo se detendría), significaría que el cuerpo, a cierto punto, iría tan rápido que por cada segundo, recorrería miles de kilómetros. Esto es, por supuesto, poco realista, pero matemáticamente correcto. Por este hecho, solo se suelen considerar los datos más racionales a la hora de graficar este proceso, ya que como puede ver, en un gráfico de posición por tiempo, la recta avanza cada vez más por el eje *y* que en el eje *x*:
 ![Movimiento rectilíneo uniformemente acelerado (MRUA) - Didactalia: material  educativo](https://www.matesfacil.com/fisica/cinematica/MRUA/Z3.png)
 
 
 ## Código
+
+# Herramientas Utilizadas
 En el aspecto de programación, para realizar este trabajo necesitamos la ayuda de ciertas librerías en Python, siendo ellas: **Pygame**, **Tkinter** y **Matplotlib**. 
 
 -Pygame consiste en una manera sencilla de tratar con sprites y colocarlos en una ventana para crear simulaciones o videojuegos en dos dimensiones. Sus funciones ayudan a la resolución de figuras simples, movimientos que pueden registrar datos, entre otras cosas. En nuestro caso, nos ayudó para crear la simulación de cómo se debería mover un objeto respecto a los ejes de un gráfico con el MRUA.
@@ -43,7 +51,15 @@ En el aspecto de programación, para realizar este trabajo necesitamos la ayuda 
 
 Siendo honestos como grupo, hay que mencionar sobre el gran uso de *Internet* para este proyecto. Sin las búsquedas numerosas sobre las funciones y librerías, enorme parte del trabajo estaría completo y pobre de información, por lo que, no podemos atribuirnos todo el crédito de redacción y funcionalidad a nosotros.
 
+# Guía de Instalación
+
 Nuestro algoritmo es simple de instalar y usar. Si gusta probarlo, una vez el código es descargado de nuestro repositorio en el que hemos contribuido, hay que ejecutarlo(Imagen). Si todo se ha realizado correctamente, hay que ingresar los datos pedidos por el programa, siendo la velocidad inicial y la aceleración, solamente colocando los valores numéricos (Imagen). Una vez se haya hecho esto, cuando se presiona el botón "Nombre de botón", una simulación de la trayectoria del objeto aparecerá a la derecha, repitiéndose una y otra vez para la apreciación detallada del proceso (Imagen). Si gusta de una forma más detallada de presentar esta información, si presiona el botón "Gráfico", una pestaña nueva se abrirá para usted en el que verá la posición del cuerpo en los primeros 10 segundos de la simulación en un gráfico con los ejes correctamente nombrados (Imagen).
+
+# Guía de Uso
+
+
+
+# Explicación del Código en Video
 
 A continuación, un video que explica oralmente nuestro código desarrollado en sus aspectos más importantes, además de una definición en otras palabras del evento físico que hemos presentado:
 (Video)
