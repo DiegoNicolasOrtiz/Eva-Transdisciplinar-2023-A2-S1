@@ -129,31 +129,31 @@ simulation = MRUASimulation(0, 0)
 # Función para dibujar la tabla gráfica en pygame
 def draw_graph(surface, simulation):
     surface.fill((0, 0, 0))
-    pygame.draw.line(surface, (130, 160, 200), (WIDTH // 4 - 30, 0), (WIDTH // 4 - 30, HEIGHT), 1)
-    pygame.draw.line(surface, (130, 160, 200), (WIDTH // 4 - 60, 0), (WIDTH // 4 - 60, HEIGHT), 1)
-    pygame.draw.line(surface, (130, 160, 200), (WIDTH // 4 - 90, 0), (WIDTH // 4 - 90, HEIGHT), 1)
-    pygame.draw.line(surface, (130, 160, 200), (WIDTH // 4 - 120, 0), (WIDTH // 4 - 120, HEIGHT), 1)
-    pygame.draw.line(surface, (130, 160, 200), (WIDTH // 4 - 150, 0), (WIDTH // 4 - 150, HEIGHT), 3)
-    pygame.draw.line(surface, (130, 160, 200), (WIDTH // 4 - 180, 0), (WIDTH // 4 - 180, HEIGHT), 1)
-    pygame.draw.line(surface, (130, 160, 200), (WIDTH // 4 + 30, 0), (WIDTH // 4 + 30, HEIGHT), 1)
-    pygame.draw.line(surface, (130, 160, 200), (WIDTH // 4 + 60, 0), (WIDTH // 4 + 60, HEIGHT), 1)
-    pygame.draw.line(surface, (130, 160, 200), (WIDTH // 4 + 90, 0), (WIDTH // 4 + 90, HEIGHT), 1)
-    pygame.draw.line(surface, (130, 160, 200), (WIDTH // 4 + 120, 0), (WIDTH // 4 + 120, HEIGHT), 1)
-    pygame.draw.line(surface, (130, 160, 200), (WIDTH // 4 + 150, 0), (WIDTH // 4 + 150, HEIGHT), 3)
-    pygame.draw.line(surface, (130, 160, 200), (WIDTH // 4 + 180, 0), (WIDTH // 4 + 180, HEIGHT), 1)
-    pygame.draw.line(surface, (130, 160, 200), (WIDTH // 4 + 210, 0), (WIDTH // 4 + 210, HEIGHT), 1)
-    pygame.draw.line(surface, (130, 160, 200), (WIDTH // 4 + 240, 0), (WIDTH // 4 + 240, HEIGHT), 1)
-    pygame.draw.line(surface, (130, 160, 200), (WIDTH // 4 + 270, 0), (WIDTH // 4 + 270, HEIGHT), 1)
-    pygame.draw.line(surface, (130, 160, 200), (WIDTH // 4 + 300, 0), (WIDTH // 4 + 300, HEIGHT), 3)
-    pygame.draw.line(surface, (130, 160, 200), (WIDTH // 4 + 330, 0), (WIDTH // 4 + 330, HEIGHT), 1)
-    pygame.draw.line(surface, (130, 160, 200), (WIDTH // 4 + 360, 0), (WIDTH // 4 + 360, HEIGHT), 1)
-    pygame.draw.line(surface, (130, 160, 200), (WIDTH // 4 + 390, 0), (WIDTH // 4 + 390, HEIGHT), 1)
-    pygame.draw.line(surface, (130, 160, 200), (WIDTH // 4 + 420, 0), (WIDTH // 4 + 420, HEIGHT), 1)
-    pygame.draw.line(surface, (130, 160, 200), (WIDTH // 4 + 450, 0), (WIDTH // 4 + 450, HEIGHT), 3)
-    pygame.draw.line(surface, (130, 160, 200), (WIDTH // 4 + 480, 0), (WIDTH // 4 + 480, HEIGHT), 1)
-    pygame.draw.line(surface, (130, 160, 200), (WIDTH // 4 + 510, 0), (WIDTH // 4 + 510, HEIGHT), 1)
-    pygame.draw.line(surface, (130, 160, 200), (WIDTH // 4 + 540, 0), (WIDTH // 4 + 540, HEIGHT), 1)
-    pygame.draw.line(surface, (130, 160, 200), (WIDTH // 4 + 570, 0), (WIDTH // 4 + 570, HEIGHT), 1)
+    pygame.draw.line(surface, (130, 160, 200), (WIDTH // 5 - 30, 0), (WIDTH // 5 - 30, HEIGHT), 1)
+    pygame.draw.line(surface, (130, 160, 200), (WIDTH // 5 - 60, 0), (WIDTH // 5 - 60, HEIGHT), 1)
+    pygame.draw.line(surface, (130, 160, 200), (WIDTH // 5 - 90, 0), (WIDTH // 5 - 90, HEIGHT), 1)
+    pygame.draw.line(surface, (130, 160, 200), (WIDTH // 5 - 120, 0), (WIDTH // 5 - 120, HEIGHT), 1)
+    pygame.draw.line(surface, (130, 160, 200), (WIDTH // 5 - 150, 0), (WIDTH // 5 - 150, HEIGHT), 3)
+    pygame.draw.line(surface, (130, 160, 200), (WIDTH // 5 - 180, 0), (WIDTH // 5 - 180, HEIGHT), 1)
+    pygame.draw.line(surface, (130, 160, 200), (WIDTH // 5 + 30, 0), (WIDTH // 5 + 30, HEIGHT), 1)
+    pygame.draw.line(surface, (130, 160, 200), (WIDTH // 5 + 60, 0), (WIDTH // 5 + 60, HEIGHT), 1)
+    pygame.draw.line(surface, (130, 160, 200), (WIDTH // 5 + 90, 0), (WIDTH // 5 + 90, HEIGHT), 1)
+    pygame.draw.line(surface, (130, 160, 200), (WIDTH // 5 + 120, 0), (WIDTH // 5 + 120, HEIGHT), 1)
+    pygame.draw.line(surface, (130, 160, 200), (WIDTH // 5 + 150, 0), (WIDTH // 5 + 150, HEIGHT), 3)
+    pygame.draw.line(surface, (130, 160, 200), (WIDTH // 5 + 180, 0), (WIDTH // 5 + 180, HEIGHT), 1)
+    pygame.draw.line(surface, (130, 160, 200), (WIDTH // 5 + 210, 0), (WIDTH // 5 + 210, HEIGHT), 1)
+    pygame.draw.line(surface, (130, 160, 200), (WIDTH // 5 + 240, 0), (WIDTH // 5 + 240, HEIGHT), 1)
+    pygame.draw.line(surface, (130, 160, 200), (WIDTH // 5 + 270, 0), (WIDTH // 5 + 270, HEIGHT), 1)
+    pygame.draw.line(surface, (130, 160, 200), (WIDTH // 5 + 300, 0), (WIDTH // 5 + 300, HEIGHT), 3)
+    pygame.draw.line(surface, (130, 160, 200), (WIDTH // 5 + 330, 0), (WIDTH // 5 + 330, HEIGHT), 1)
+    pygame.draw.line(surface, (130, 160, 200), (WIDTH // 5 + 360, 0), (WIDTH // 5 + 360, HEIGHT), 1)
+    pygame.draw.line(surface, (130, 160, 200), (WIDTH // 5 + 390, 0), (WIDTH // 5 + 390, HEIGHT), 1)
+    pygame.draw.line(surface, (130, 160, 200), (WIDTH // 5 + 420, 0), (WIDTH // 5 + 420, HEIGHT), 1)
+    pygame.draw.line(surface, (130, 160, 200), (WIDTH // 5 + 450, 0), (WIDTH // 5 + 450, HEIGHT), 3)
+    pygame.draw.line(surface, (130, 160, 200), (WIDTH // 5 + 480, 0), (WIDTH // 5 + 480, HEIGHT), 1)
+    pygame.draw.line(surface, (130, 160, 200), (WIDTH // 5 + 510, 0), (WIDTH // 5 + 510, HEIGHT), 1)
+    pygame.draw.line(surface, (130, 160, 200), (WIDTH // 5 + 540, 0), (WIDTH // 5 + 540, HEIGHT), 1)
+    pygame.draw.line(surface, (130, 160, 200), (WIDTH // 5 + 570, 0), (WIDTH // 5 + 570, HEIGHT), 1)
     pygame.draw.line(surface, (130, 160, 200), (0, HEIGHT//2 + 30), (WIDTH, HEIGHT//2 + 30), 1)
     pygame.draw.line(surface, (130, 160, 200), (0, HEIGHT//2 + 60), (WIDTH, HEIGHT//2 + 60), 1)
     pygame.draw.line(surface, (130, 160, 200), (0, HEIGHT//2 + 90), (WIDTH, HEIGHT//2 + 90), 1)
@@ -173,15 +173,32 @@ def draw_graph(surface, simulation):
     pygame.draw.line(surface, (130, 160, 200), (0, HEIGHT//2 - 210), (WIDTH, HEIGHT//2 - 210), 1)
     pygame.draw.line(surface, (130, 160, 200), (0, HEIGHT//2 - 240), (WIDTH, HEIGHT//2 - 240), 1)
     pygame.draw.line(surface, (130, 160, 200), (0, HEIGHT//2 - 270), (WIDTH, HEIGHT//2 - 270), 1)
-    pygame.draw.line(surface, (255, 255, 255), (0, 330), (WIDTH, 330), 3)
-    pygame.draw.line(surface, (255, 255, 255), (WIDTH // 4, 0), (WIDTH // 4, HEIGHT), 3)
-    pygame.draw.circle(surface, (255, 0, 0), (WIDTH // 4 + int(simulation.time)*30, 330 + int(simulation.positiony)), 5)
+    pygame.draw.line(surface, (255, 255, 255), (0, HEIGHT//2 + 150), (WIDTH, HEIGHT//2 + 150), 3)
+    pygame.draw.line(surface, (255, 255, 255), (WIDTH // 5, 0), (WIDTH // 5, HEIGHT), 3)
+    pygame.draw.circle(surface, (255, 0, 0), (WIDTH // 5 + int(simulation.time)*30, HEIGHT//2 + 150 + int(simulation.positiony)), 5)
 
+    # Agregar números a las líneas
+    font = pygame.font.Font(None, 20)
+    number = 120
+    for y in range(0, HEIGHT, 30):
+        if number != 0:
+            text = font.render(str(number), True, (255, 255, 255))
+            surface.blit(text, (WIDTH // 5 - 30, y))
+        number -= 10
+        
+
+    number = 0
+    for x in range(WIDTH // 4 - 9, WIDTH, 30):
+        text = font.render(str(number), True, (255, 255, 255))
+        surface.blit(text, (x, HEIGHT // 6 + 300))
+        number += 1
+        
     pygame_image = pygame.image.tostring(surface, 'RGB')
     image = Image.frombytes('RGB', surface.get_size(), pygame_image)
     photo = ImageTk.PhotoImage(image)
     label.config(image=photo)
     label.image = photo
+
 
 def iniciar():
     
