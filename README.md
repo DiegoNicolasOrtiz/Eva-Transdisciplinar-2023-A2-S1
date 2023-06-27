@@ -79,7 +79,7 @@ También hay que mencionar las librerías en Python usadas, siendo ellas: **Pyga
 
 -Pygame consiste en una manera sencilla de tratar con sprites y colocarlos en una ventana para crear simulaciones o videojuegos en dos dimensiones. Sus funciones ayudan a la resolución de figuras simples, movimientos que pueden registrar datos, entre otras cosas. En nuestro caso, nos ayudó para crear la simulación de cómo se debería mover un objeto respecto a los ejes de un gráfico con el MRUA.
 
--Tkinter se trata de un creador de interfaces para ventanas abiertas por código. Sus funciones incluyen botones, campos en los que se pueden colocar datos y poder tenerlos guardados, simplemente texto, entre otras cosas. Para nuestro equipo, la librería fue de ayuda para que el proyecto se vea más ordenado y con sentido para que se pueda comprender su estructura.
+-Tkinter se trata de un creador de interfaces para ventanas abiertas por código. Sus funciones incluyen botones, campos en los que se pueden colocar datos y poder tenerlos guardados, simplemente texto, entre otras cosas. Para nuestro equipo, la librería fue de ayuda para que el proyecto se vea más ordenado y con sentido para que se pueda comprender su estructura, siendo el menú principal la interfaz que creamos.
 
 -Matplotlib es definido como la librería ideal para generar gráficos en dos dimensiones. Sus funciones incluyen lo más básico en gráficos, teniendo diferentes tipos de éstos, capacidad de colocar nombres a cada parámetro, colocar valores a ellos y demás. En este caso, ayudó en la creación del gráfico de nuestro evento físico, el cual se diferencia en gran medida con otros fenómenos por cómo funciona la recta en curva.
 
