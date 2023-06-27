@@ -121,7 +121,7 @@ Si gusta de una forma más detallada de presentar esta información, si presiona
 
 ![image](https://github.com/DiegoNicolasOrtiz/Eva-Transdisciplinar-2023-A2-S1/assets/134817301/70920a38-a5e6-4ba0-b260-a470ae7e7090)
 
-En esta ventana se puede guardar la imagen, mover el gráfico, entre otras cosas.
+En esta ventana se puede guardar la imagen, mover el gráfico, entre otras cosas. 
 
 ![image](https://github.com/DiegoNicolasOrtiz/Eva-Transdisciplinar-2023-A2-S1/assets/134817301/c721c05f-adae-4a4c-9edf-a34e9e08fe15)
 
