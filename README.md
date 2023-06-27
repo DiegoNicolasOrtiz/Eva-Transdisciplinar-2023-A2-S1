@@ -129,7 +129,7 @@ En esta ventana se puede guardar la imagen, mover el gráfico, entre otras cosas
 **Explicación del Proyecto en Video**
 
 A continuación, un video que explica oralmente nuestro código desarrollado en sus aspectos más importantes, además de una definición en otras palabras del evento físico que hemos presentado:
-[(Video)](https://www.youtube.com/watch?v=yO754VJ7deg)
+https://youtu.be/1YkGrz5NqDY
  
 
 ## Conclusiones
