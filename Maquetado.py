@@ -1,5 +1,4 @@
 from tkinter import *
-from tkinter import messagebox
 import tkinter
 import matplotlib.pyplot as plt
 import pygame
