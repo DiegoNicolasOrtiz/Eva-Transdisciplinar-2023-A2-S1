@@ -68,6 +68,7 @@ Estos ejemplos representan situaciones en las que puedes observar el movimiento 
 ## Código
 
 **Herramientas Utilizadas**
+
 En el aspecto de programación, para realizar este trabajo necesitamos la ayuda de ciertas aplicaciones como Python 3 y Visual Studio Code con la extensión de Python.
 
 -Python es un lenguaje de alto nivel de programación interpretado que al ser más básico, es ideal para empezar a aprender a programar, siendo utilizado para desarrollar aplicaciones de todo tipo.
@@ -90,12 +91,11 @@ Nuestro algoritmo es simple de instalar y usar. Si gusta probarlo, el proceso em
 
 Después, se pide instalar las extensiones de Python en la propia aplicación de Visual Studio Code. 
 
-Luego, son necesarias las librerías. Éstas se pueden descargar rápidamente ingresando en el buscador de 
+Luego, son necesarias las librerías. Éstas se pueden descargar rápidamente ingresando en el buscador de tu computadora, el nombre de una aplicación que debería venir de fábrica en ella, llamándose "Símbolo del Sistema". Una vez se abra, se verá una gran caja para ingresar comandos. Para instalar las librerías correspondientes, escribe "pip3 install tk" para instalar Tkinter, "pip3 install matplotli" para instalar Matplotlib, y "pip3 install pygame" para instalar pygame. Gracias a "pip3", las librerías deberían instalarse para Python3 sin mayores problemas y se pueden usar en Visual Studio Code si son importadas correctamente.
 
-el código de nuestro repositorio en el que hemos contribuido, siendo el archivo señalado:
+Finalmente, hay que instalar el código "Maquetado.py" de nuestro repositorio. Una vez descargado, debe abrirse con Visual Studio Code para evitar cualquier problema.
 
 ![image](https://github.com/DiegoNicolasOrtiz/Eva-Transdisciplinar-2023-A2-S1/assets/134817301/ff133934-477d-4dd4-ad3c-cfcc31940321)
-
 
 
 **Guía de Uso**
