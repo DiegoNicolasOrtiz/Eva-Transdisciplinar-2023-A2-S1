@@ -68,21 +68,21 @@ label_texto2.place(x=200, y=11)
 
 label_velocidad = Label(ventana, text = "Velocidad Inicial: ", bg="steel blue")
 label_velocidad.pack()
-label_velocidad.place(x=55, y=300)
+label_velocidad.place(x=59, y=300)
 
 label_aceleracion = Label(ventana, text = "Aceleración: ", bg="steel blue")
 label_aceleracion.pack()
-label_aceleracion.place(x=77, y=260)
+label_aceleracion.place(x=81, y=260)
 
 #----------------------------Entrys--------------------------------------------------------------
 
 entry_velocidad = Entry(ventana)
 entry_velocidad.pack()
-entry_velocidad.place(x=150, y=300)
+entry_velocidad.place(x=154, y=300)
 
 aceleracion_entry = Entry(ventana)
 aceleracion_entry.pack()
-aceleracion_entry.place(x=150, y=260)
+aceleracion_entry.place(x=154, y=260)
 
 
 
@@ -121,7 +121,7 @@ class MRUASimulation:
         self.positiony = -1*(self.initial_velocity * self.time + 0.5 * self.acceleration * self.time**2)
         self.position_g = 1 * (self.initial_velocity * self.time + 0.5 * self.acceleration * self.time **2)
         self.time += dt
-        if self.positiony > 500 or self.time > 20 or self.positiony < -500:
+        if self.positiony > 30 or self.time > 20 or self.positiony < -130:
             self.positiony = 0
             self.time = 0
 
@@ -198,6 +198,18 @@ def draw_graph(surface, simulation):
     photo = ImageTk.PhotoImage(image)
     label.config(image=photo)
     label.image = photo
+    
+    label_textog = Label(text = """Posición (m)""")
+    label_textog.pack()
+    label_textog.config(border = "3")
+    label_textog.config(relief = SUNKEN)
+    label_textog.place(x=400, y=255)
+    
+    label_textog2 = Label(text = """Tiempo (s)""")
+    label_textog2.pack()
+    label_textog2.config(border = "3")
+    label_textog2.config(relief = SUNKEN)
+    label_textog2.place(x=730, y=450)
 
 def iniciar():
     
@@ -230,7 +242,7 @@ def crear_grafico(posicion, tiempo):
     plt.plot(tiempo, posicion)
     plt.xlabel('Tiempo (s)')
     plt.ylabel('Posición (m)')
-    plt.title('Simulación de Movimiento Rectilíneo Uniforme Acelerado')
+    plt.title('Simulación de Movimiento Rectilíneo Uniformemente Acelerado')
     plt.grid(True)
     plt.show()
 
