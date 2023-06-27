@@ -41,7 +41,13 @@ Si tuviéramos que dar una solución a cómo resolver en sí la ecuación y proc
 ## Código
 
 **Herramientas Utilizadas**
-En el aspecto de programación, para realizar este trabajo necesitamos la ayuda de ciertas librerías en Python, siendo ellas: **Pygame**, **Tkinter** y **Matplotlib**. 
+En el aspecto de programación, para realizar este trabajo necesitamos la ayuda de ciertas aplicaciones como Python 3 y Visual Studio Code con la extensión de Python.
+
+-Python 
+
+-Visual Studio Code 
+
+También hay que mencionar las librerías en Python usadas, siendo ellas: **Pygame**, **Tkinter** y **Matplotlib**. 
 
 -Pygame consiste en una manera sencilla de tratar con sprites y colocarlos en una ventana para crear simulaciones o videojuegos en dos dimensiones. Sus funciones ayudan a la resolución de figuras simples, movimientos que pueden registrar datos, entre otras cosas. En nuestro caso, nos ayudó para crear la simulación de cómo se debería mover un objeto respecto a los ejes de un gráfico con el MRUA.
 
