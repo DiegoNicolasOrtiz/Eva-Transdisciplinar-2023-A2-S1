@@ -67,9 +67,9 @@ Estos ejemplos representan situaciones en las que puedes observar el movimiento 
 **Herramientas Utilizadas**
 En el aspecto de programación, para realizar este trabajo necesitamos la ayuda de ciertas aplicaciones como Python 3 y Visual Studio Code con la extensión de Python.
 
--Python 
+-Python es un lenguaje de alto nivel de programación interpretado que al ser más básico, es ideal para empezar a aprender a programar, siendo utilizado para desarrollar aplicaciones de todo tipo.
 
--Visual Studio Code 
+-Visual Studio Code es un editor de código fuente desarrollado por Microsoft. Básicamente te da la posibilidad de escribir y ejecutar código en cualquier lenguaje de programación, esto gracias a sus extensiones y amplia cantidad de opciones.
 
 También hay que mencionar las librerías en Python usadas, siendo ellas: **Pygame**, **Tkinter** y **Matplotlib**. 
 
