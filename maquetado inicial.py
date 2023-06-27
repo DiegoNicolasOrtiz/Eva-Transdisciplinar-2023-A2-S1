@@ -179,12 +179,12 @@ def draw_graph(surface, simulation):
 
     # Agregar números a las líneas
     font = pygame.font.Font(None, 20)
-    number = 11
+    number = 110
     for y in range(0, HEIGHT, 30):
         if number != 0:
             text = font.render(str(number), True, (255, 255, 255))
             surface.blit(text, (WIDTH // 3.7 - 30, y))
-        number -= 1
+        number -= 10
         
 
     number = 0
