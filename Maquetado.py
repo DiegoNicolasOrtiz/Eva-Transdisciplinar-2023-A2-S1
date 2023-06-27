@@ -59,12 +59,12 @@ label_texto.config(border = "7")
 label_texto.config(relief = SUNKEN)
 label_texto.place(x=47, y=95)
 
-label_texto = Label(frame_2, text = """    x = x₀ + v₀t + (1/2)at² 
+label_texto2 = Label(frame_2, text = """    x = x₀ + v₀t + (1/2)at² 
 (MRUA)""")
-label_texto.pack()
-label_texto.config(border = "7")
-label_texto.config(relief = SUNKEN)
-label_texto.place(x=200, y=5)
+label_texto2.pack()
+label_texto2.config(border = "7")
+label_texto2.config(relief = SUNKEN)
+label_texto2.place(x=200, y=11)
 
 label_velocidad = Label(ventana, text = "Velocidad Inicial: ", bg="steel blue")
 label_velocidad.pack()
@@ -175,7 +175,7 @@ def draw_graph(surface, simulation):
     pygame.draw.line(surface, (130, 160, 200), (0, HEIGHT//2 - 270), (WIDTH, HEIGHT//2 - 270), 1)
     pygame.draw.line(surface, (255, 255, 255), (0, HEIGHT//2 + 150), (WIDTH, HEIGHT//2 + 150), 3)
     pygame.draw.line(surface, (255, 255, 255), (WIDTH // 5, 0), (WIDTH // 5, HEIGHT), 3)
-    pygame.draw.circle(surface, (255, 0, 0), (WIDTH // 5 + int(simulation.time)*30, HEIGHT//2 + 150 + int(simulation.positiony)), 5)
+    pygame.draw.circle(surface, (255, 0, 0), (WIDTH // 5 + int(simulation.time)*30, HEIGHT//2 + 150 + int(simulation.positiony)*3), 5)
 
     # Agregar números a las líneas
     font = pygame.font.Font(None, 20)
@@ -187,10 +187,10 @@ def draw_graph(surface, simulation):
         number -= 10
         
 
-    number = 0
+    number = 1
     for x in range(WIDTH // 4 - 9, WIDTH, 30):
         text = font.render(str(number), True, (255, 255, 255))
-        surface.blit(text, (x, HEIGHT // 6 + 300))
+        surface.blit(text, (x, HEIGHT // 6 + 305))
         number += 1
         
     pygame_image = pygame.image.tostring(surface, 'RGB')
@@ -199,7 +199,6 @@ def draw_graph(surface, simulation):
     label.config(image=photo)
     label.image = photo
 
-
 def iniciar():
     
     initial_velocity = float(entry_velocidad.get())
@@ -207,7 +206,6 @@ def iniciar():
     simulation.acceleration = acceleration
     simulation.initial_velocity = initial_velocity
     simulation.update(1)
-    print(simulation.time)
     surf = pygame.Surface((WIDTH,HEIGHT))
     draw_graph(surf, simulation)
     # Programar la próxima actualización
@@ -215,10 +213,16 @@ def iniciar():
 
 # Función para iniciar la simulación
 def start_simulation():
-    initial_velocity = float(entry_velocidad.get())
-    acceleration = float(aceleracion_entry.get())
+    label_texto2.destroy()
+    initial_velocity = str(entry_velocidad.get())
+    acceleration = str(aceleracion_entry.get())
     surf = pygame.Surface((WIDTH,HEIGHT))
-
+    label_texto = Label(frame_2, text = """    x = x₀ + """+ initial_velocity+"""t + (1/2)"""+acceleration+"""t² 
+(MRUA)""")
+    label_texto.pack()
+    label_texto.config(border = "7")
+    label_texto.config(relief = SUNKEN)
+    label_texto.place(x=200, y=11)
     # Configuración de la ventana de pygame
     iniciar()
 
