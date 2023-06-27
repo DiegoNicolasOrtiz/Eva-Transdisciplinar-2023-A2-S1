@@ -1,7 +1,5 @@
 # Eva-Transdisciplinar-2023-A2-S1
 
-**Link de video para explicación del proyecto**: https://www.youtube.com/watch?v=yO754VJ7deg
-
 **Integrantes:**
 
 -Diego Ortiz
@@ -37,6 +35,19 @@ Cabe destacar que esta matemática enseñada es usada incluso en nuestro código
 Si tuviéramos que dar una solución a cómo resolver en sí la ecuación y proceso, sería averiguar la aceleración en la fórmula, la cual, es constante en este fenómeno, cada segundo siempre aumentará o disminuirá (La seguimos tratando cómo aceleración en términos correctos, ya que sigue siendo un cambio de la rapidez) a la velocidad en una misma cantidad. Con esta información, podemos obtenerla dividiendo la variación de la velocidad (**Δv**) por la variación del tiempo (**Δt**). Es de importancia considerar que, gracias a que la aceleración nunca cambia en este proceso, simular los datos tomados sería ir de cuesta arriba, literalmente. Si la velocidad aumenta y aumenta (Si disminuye eventualmente el cuerpo se detendría), significaría que el cuerpo, a cierto punto, iría tan rápido que por cada segundo, recorrería miles de kilómetros. Esto es, por supuesto, poco realista, pero matemáticamente correcto. Por este hecho, solo se suelen considerar los datos más racionales a la hora de graficar este proceso, ya que como puede ver, en un gráfico de posición por tiempo, la recta avanza cada vez más por el eje *y* que en el eje *x*:
 ![Movimiento rectilíneo uniformemente acelerado (MRUA) - Didactalia: material  educativo](https://www.matesfacil.com/fisica/cinematica/MRUA/Z3.png)
 
+**Aplicaciones**
+
+El Movimiento Rectilíneo Uniformemente Acelerado se puede ver en situaciones donde un objeto se mueve en línea recta y su velocidad cambia de manera constante. A continuación, algunos ejemplos de como se puede ver en la vida cotidiana:
+
+Saltar desde una silla: Cuando saltas desde una silla, experimentas un MRUA. Al principio, tu velocidad es cero, pero a medida que caes, tu velocidad aumenta constantemente debido a la gravedad.
+
+Acelerar en un automóvil: Cuando un automóvil acelera desde una posición de reposo, experimenta un MRUA. La velocidad del automóvil aumenta de manera constante hasta que alcanza la velocidad deseada.
+
+Frenar en una bicicleta: Si aplicas los frenos en una bicicleta, experimentas un MRUA negativo (desaceleración). Tu velocidad disminuye constantemente hasta que te detienes por completo.
+
+Lanzar una pelota hacia arriba: Si lanzas una pelota hacia arriba, experimentará un MRUA. Al principio, la pelota se mueve rápidamente hacia arriba, pero su velocidad disminuye debido a la gravedad hasta que finalmente cae hacia abajo.
+
+Estos ejemplos representan situaciones en las que puedes observar el movimiento rectilíneo uniformemente acelerado en tu vida diaria. El MRUA implica un cambio constante en la velocidad de un objeto en línea recta.
 
 ## Código
 
@@ -68,7 +79,7 @@ Nuestro algoritmo es simple de instalar y usar. Si gusta probarlo, una vez el c�
 **Explicación del Código en Video**
 
 A continuación, un video que explica oralmente nuestro código desarrollado en sus aspectos más importantes, además de una definición en otras palabras del evento físico que hemos presentado:
-(Video)
+[(Video)](https://www.youtube.com/watch?v=yO754VJ7deg)
  
 
 ## Conclusiones
