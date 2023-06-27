@@ -97,12 +97,36 @@ Finalmente, hay que instalar el código "Maquetado.py" de nuestro repositorio. U
 
 ![image](https://github.com/DiegoNicolasOrtiz/Eva-Transdisciplinar-2023-A2-S1/assets/134817301/ff133934-477d-4dd4-ad3c-cfcc31940321)
 
-
 **Guía de Uso**
 
-Si todo lo anterior se ha realizado correctamente, hay que ingresar los datos pedidos por el programa, siendo la velocidad inicial y la aceleración, solamente colocando los valores numéricos (Imagen). Una vez se haya hecho esto, cuando se presiona el botón "Nombre de botón", una simulación de la trayectoria del objeto aparecerá a la derecha, repitiéndose una y otra vez para la apreciación detallada del proceso (Imagen). Si gusta de una forma más detallada de presentar esta información, si presiona el botón "Gráfico", una pestaña nueva se abrirá para usted en el que verá la posición del cuerpo en los primeros 10 segundos de la simulación en un gráfico con los ejes correctamente nombrados (Imagen).
+Si todo lo anterior se ha realizado correctamente, se debe iniciar el código mediante el botón de la esquina superior derecha.
 
-**Explicación del Código en Video**
+![image](https://github.com/DiegoNicolasOrtiz/Eva-Transdisciplinar-2023-A2-S1/assets/134817301/5211945f-3c5e-487d-af73-e132aeef532e)
+
+El código se iniciará y mostrará una ventana como esta:
+
+![image](https://github.com/DiegoNicolasOrtiz/Eva-Transdisciplinar-2023-A2-S1/assets/134817301/6deefc0e-9ff3-44f7-b5b2-35a7bb3c5d99)
+
+Ahora, para la simulación, hay que ingresar los datos pedidos por el programa en los campos correspondientes, siendo la velocidad inicial en metros por segundo y la aceleración en metros por segundo al cuadrado, solamente colocando los valores numéricos.
+
+![image](https://github.com/DiegoNicolasOrtiz/Eva-Transdisciplinar-2023-A2-S1/assets/134817301/cfed5db5-bec5-4213-9653-a706d1db46a8)
+
+Una vez se haya hecho esto, cuando se presiona el botón "Iniciar Simulación", una simulación de la posición por el tiempo del objeto aparecerá a la derecha, repitiéndose una y otra vez para la apreciación detallada del proceso. Aquí se podrá ver cuánto incrementa la posición del cuerpo a medida que avanzan los segundos.
+
+![image](https://github.com/DiegoNicolasOrtiz/Eva-Transdisciplinar-2023-A2-S1/assets/134817301/3fef34b6-3948-4350-82e4-be387bb6d7d7)
+
+Si gusta de una forma más detallada de presentar esta información, si presiona el botón "Mostrar Gráfico", una pestaña nueva se abrirá para usted en el que verá la posición del cuerpo en los primeros 10 segundos de la simulación en un gráfico con los ejes correctamente nombrados.
+
+![image](https://github.com/DiegoNicolasOrtiz/Eva-Transdisciplinar-2023-A2-S1/assets/134817301/d12bf165-7331-454f-936f-6757c267f7ad)
+
+![image](https://github.com/DiegoNicolasOrtiz/Eva-Transdisciplinar-2023-A2-S1/assets/134817301/70920a38-a5e6-4ba0-b260-a470ae7e7090)
+
+En esta ventana se puede guardar la imagen, mover el gráfico, entre otras cosas.
+
+![image](https://github.com/DiegoNicolasOrtiz/Eva-Transdisciplinar-2023-A2-S1/assets/134817301/c721c05f-adae-4a4c-9edf-a34e9e08fe15)
+
+
+**Explicación del Proyecto en Video**
 
 A continuación, un video que explica oralmente nuestro código desarrollado en sus aspectos más importantes, además de una definición en otras palabras del evento físico que hemos presentado:
 [(Video)](https://www.youtube.com/watch?v=yO754VJ7deg)
