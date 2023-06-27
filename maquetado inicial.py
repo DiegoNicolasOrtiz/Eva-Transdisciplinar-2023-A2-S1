@@ -118,11 +118,12 @@ class MRUASimulation:
         self.positiony = 0
 
     def update(self, dt):
-        self.position = self.initial_velocity * self.time + 0.5 * self.acceleration * self.time**2
         self.positiony = -1*(self.initial_velocity * self.time + 0.5 * self.acceleration * self.time**2)
-        self.position_g = 1 * (self.initial_velocity * self.time + 0.5 * self.acceleration * self.time ** 3)
-
+        self.position_g = 1 * (self.initial_velocity * self.time + 0.5 * self.acceleration * self.time **2)
         self.time += dt
+        if self.positiony > 500 or self.time > 20 or self.positiony < -500:
+            self.positiony = 0
+            self.time = 0
 
 simulation = MRUASimulation(0, 0)
 # Función para dibujar la tabla gráfica en pygame
@@ -176,11 +177,28 @@ def draw_graph(surface, simulation):
     pygame.draw.line(surface, (255, 255, 255), (WIDTH // 4, 0), (WIDTH // 4, HEIGHT), 3)
     pygame.draw.circle(surface, (255, 0, 0), (WIDTH // 4 + int(simulation.time)*30, 330 + int(simulation.positiony)), 5)
 
+    # Agregar números a las líneas
+    font = pygame.font.Font(None, 20)
+    number = 11
+    for y in range(0, HEIGHT, 30):
+        if number != 0:
+            text = font.render(str(number), True, (255, 255, 255))
+            surface.blit(text, (WIDTH // 3.7 - 30, y))
+        number -= 1
+        
+
+    number = 0
+    for x in range(WIDTH // 4 - 9, WIDTH, 30):
+        text = font.render(str(number), True, (255, 255, 255))
+        surface.blit(text, (x, HEIGHT // 10 + 300))
+        number += 1
+        
     pygame_image = pygame.image.tostring(surface, 'RGB')
     image = Image.frombytes('RGB', surface.get_size(), pygame_image)
     photo = ImageTk.PhotoImage(image)
     label.config(image=photo)
     label.image = photo
+
 
 def iniciar():
     
@@ -221,10 +239,11 @@ def mostrar_grafico():
     times = []
 
     while simulation.time < tiempo_simulacion:
-        simulation.update(1 / FPS)
+        simulation.update(1)
         positions.append(simulation.position_g)
         times.append(simulation.time)
-
+    print(positions)
+    print(times)
     crear_grafico(positions, times)
 
 #Boton para iniciar la simulación
