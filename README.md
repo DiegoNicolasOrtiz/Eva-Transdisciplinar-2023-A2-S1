@@ -25,13 +25,21 @@ La persona que descubrió el **MRUA** fue el gran matemático *Galileo Galilei*,
 
 Consiste básicamente en el cambio constante de la velocidad de un cuerpo en movimiento. Puede ser un auto acelerando, una pelota cayendo, etc. Cada segundo (**t**), el objeto en cuestión tendrá una posición (**x**) y velocidad (**v**) distintas, dando lugar a una recopilación de datos fascinante para los interesados en la física y matemática.
 Debido a la cantidad de variables que están presentes en el evento físico, existen varias fórmulas que ayudan a calcular datos matemáticos para el trabajo, siendo las principales:
+
 ![image](https://github.com/DiegoNicolasOrtiz/Eva-Transdisciplinar-2023-A2-S1/assets/134817301/7f420f8d-5281-4a11-95da-f0140042ef44)
+
 Siendo la primera la **ecuación de itinerario**.
+
 ![image](https://github.com/DiegoNicolasOrtiz/Eva-Transdisciplinar-2023-A2-S1/assets/134817301/ead8ab43-e2f5-4596-9f59-9f55b4a970a9)
+
 La segunda la **ecuación de la rapidez**.
+
 ![image](https://github.com/DiegoNicolasOrtiz/Eva-Transdisciplinar-2023-A2-S1/assets/134817301/911cdf26-a023-4425-8f3c-bb79f37cd91f)
+
 Y la tercera, la **ecuación de la aceleración**.
+
 La posición del cuerpo en movimiento es clave en el proceso, porque ésta es constantemente modificada.
+
 Teniendo sobre todo el foco en la *aceleración* (**a**) en cada expresión, ya que es la principal causante del fenómeno, y agrega la parte "Acelerado" a su nombre. La aceleración provoca que la velocidad cambie cada instante del proceso en movimiento del cuerpo, siendo un concepto realmente conocido cuando nos referimos a esa modificación de rapidez. La propia gravedad de la Tierra cuenta como una aceleración a la que somos sometidos en todo momento, correspondiendo a 9.8 metros partidos por segundos al cuadrado.
 Cabe destacar que esta matemática enseñada es usada incluso en nuestro código para simular el proceso físico.
 
