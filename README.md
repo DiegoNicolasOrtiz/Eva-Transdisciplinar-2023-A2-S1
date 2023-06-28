@@ -95,7 +95,7 @@ Nuestro algoritmo es simple de instalar y usar. Si gusta probarlo, el proceso em
 
 Luego, son necesarias las librerías. Éstas se pueden descargar rápidamente ingresando en el buscador de tu computadora, el nombre de una aplicación que debería venir de fábrica en ella, llamándose "Símbolo del Sistema". Una vez se abra, se verá una gran caja para ingresar comandos. Esto correspondería al terminal cmd de tu dispositivo. La ventana debería verse así:
 
-![image](https://github.com/DiegoNicolasOrtiz/Eva-Transdisciplinar-2023-A2-S1/assets/134817301/39121be9-977b-4076-a6a7-84969a2ac683)
+![image](https://github.com/DiegoNicolasOrtiz/Eva-Transdisciplinar-2023-A2-S1/assets/134817301/357713bd-cb26-4e4c-89a1-132e57e1edbf)
 
 Para instalar las librerías de esa forma, se necesita el programa "pip3". Para poder instalarlo, es necesario tener Python3 (Puedes escribir "python --version" en la caja de comandos, y si está instalado, saldrá la versión que posees). Si cumples con ese requisito, escribe en la caja de comandos: 
 
