@@ -83,19 +83,55 @@ También hay que mencionar las librerías en Python usadas, siendo ellas: **Pyga
 
 -Matplotlib es definido como la librería ideal para generar gráficos en dos dimensiones. Sus funciones incluyen lo más básico en gráficos, teniendo diferentes tipos de éstos, capacidad de colocar nombres a cada parámetro, colocar valores a ellos y demás. En este caso, ayudó en la creación del gráfico de nuestro evento físico, el cual se diferencia en gran medida con otros fenómenos por cómo funciona la recta en curva.
 
+-Pillow corresponde a nuestra librería más reciente, la cual agrega soporta a la manipulación, guardado, entre otras funciones con archivos de formato de imagen. Para nuestro caso, fue de enorme utilidad para hacer la incrustación de la simulación de pygame en la interfaz de Tkinter mediante el tomar fotos cada cierto tiempo de la animación.
+
 Siendo honestos como grupo, hay que mencionar sobre el gran uso de *Internet* para este proyecto. Sin las búsquedas numerosas sobre las funciones y librerías, enorme parte del trabajo estaría completo y pobre de información, por lo que, no podemos atribuirnos todo el crédito de redacción y funcionalidad a nosotros.
 
 **Guía de Instalación**
 
 Nuestro algoritmo es simple de instalar y usar. Si gusta probarlo, el proceso empieza descargando las aplicaciones mencionadas, siendo más que suficiente la última versión de Python, siendo Python 3, y Visual Studio Code.
 
-Después, se pide instalar las extensiones de Python en la propia aplicación de Visual Studio Code. 
+Luego, son necesarias las librerías. Éstas se pueden descargar rápidamente ingresando en el buscador de tu computadora, el nombre de una aplicación que debería venir de fábrica en ella, llamándose "Símbolo del Sistema". Una vez se abra, se verá una gran caja para ingresar comandos. Esto correspondería al terminal cmd de tu dispositivo. La ventana debería verse así:
 
-Luego, son necesarias las librerías. Éstas se pueden descargar rápidamente ingresando en el buscador de tu computadora, el nombre de una aplicación que debería venir de fábrica en ella, llamándose "Símbolo del Sistema". Una vez se abra, se verá una gran caja para ingresar comandos. Para instalar las librerías correspondientes, escribe "pip3 install tk" para instalar Tkinter, "pip3 install matplotli" para instalar Matplotlib, y "pip3 install pygame" para instalar pygame. Gracias a "pip3", las librerías deberían instalarse para Python3 sin mayores problemas y se pueden usar en Visual Studio Code si son importadas correctamente.
+![image](https://github.com/DiegoNicolasOrtiz/Eva-Transdisciplinar-2023-A2-S1/assets/134817301/39121be9-977b-4076-a6a7-84969a2ac683)
 
-Finalmente, hay que instalar el código "Maquetado.py" de nuestro repositorio. Una vez descargado, debe abrirse con Visual Studio Code para evitar cualquier problema.
+Para instalar las librerías de esa forma, se necesita el programa "pip3". Para poder instalarlo, es necesario tener Python3 (Puedes escribir "python --version" en la caja de comandos, y si está instalado, saldrá la versión que posees). Si cumples con ese requisito, escribe en la caja de comandos: 
+
+*curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py*
+
+Y después presiona el botón "enter" como si fuera un mensaje. Algo de texto debería aparecer. 
+
+Acto seguido, escribe:
+
+*python get-pip.py*
+
+Y después presiona el botón "enter" como si fuera un mensaje. Inmediatamente, se debería instalar pip en unos momentos. Si todo ha salido bien, se puede continuar al siguiente paso, las librerías.
+
+Para instalar las librerías correspondientes, de forma similar al paso anterior, escribe los siguientes comandos por separado, ingresando con el botón "enter" para enviar la orden e instalarlo. Cada instalación debería tomar cierto tiempo. Los comandos son:
+
+*pip3 install tk*
+
+para instalar **Tkinter**, 
+
+*pip3 install matplotlib* 
+
+para instalar **Matplotlib**, 
+
+*pip3 install pygame* 
+
+para instalar **pygame**, y 
+
+*python3 -m pip install --upgrade pip* 
+
+para instalar **Pillow**. 
+
+Gracias a "pip3", las librerías deberían instalarse para Python3 sin mayores problemas y se pueden usar en Visual Studio Code si son importadas correctamente (Como está escrito al inicio de de nuestro código).
+
+Finalmente, hay que instalar el código "Maquetado.py" de nuestro repositorio. Una vez descargado, debe abrirse con Visual Studio Code para evitar cualquier problema ("Abrir con" y seleccionar Visual Studio Code).
 
 ![image](https://github.com/DiegoNicolasOrtiz/Eva-Transdisciplinar-2023-A2-S1/assets/134817301/ff133934-477d-4dd4-ad3c-cfcc31940321)
+
+Es muy probable que cuando se instale y se abra, saldrá una ventana de advertencia en la se avisa que el archivo podría ser peligroso, por lo que se entraría en modo seguro, lo cual desactivaría las librerías del algoritmo (Esto llevaría a errores a la hora de ejecutar el código). Es solamente un protocolo común de Visual Studio Studio, somos de confianza. Para evitar entrar en modo seguro en el código, hay que seleccionar que se concede el permiso. A partir de eso, el código debería funcionar sin ningún problema.
 
 **Guía de Uso**
 
