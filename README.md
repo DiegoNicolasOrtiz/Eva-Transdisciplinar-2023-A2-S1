@@ -159,6 +159,8 @@ Si gusta de una forma más detallada de presentar esta información, si presiona
 
 ![image](https://github.com/DiegoNicolasOrtiz/Eva-Transdisciplinar-2023-A2-S1/assets/134817301/70920a38-a5e6-4ba0-b260-a470ae7e7090)
 
+Si es de su interés el por qué elegimos dedicar ambos gráficos a la posición y el tiempo, es debido a que, a la hora de representar el aspecto matemático mejor conocido del fenómeno físico, lo más usado es la curva de la posición cada vez lejana tras cada segundo del cuerpo en movimiento con aceleración. Siendo uno de los gráficos más interactivo al mostrar el movimiento del círculo como trayectoria del gráfico, y el otro enseñando los datos detallados con mayor comodidad.
+
 En esta ventana se puede guardar la imagen, mover el gráfico, entre otras cosas. 
 
 ![image](https://github.com/DiegoNicolasOrtiz/Eva-Transdisciplinar-2023-A2-S1/assets/134817301/c721c05f-adae-4a4c-9edf-a34e9e08fe15)
