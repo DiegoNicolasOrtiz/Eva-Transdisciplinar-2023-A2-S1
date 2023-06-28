@@ -75,7 +75,7 @@ En el aspecto de programación, para realizar este trabajo necesitamos la ayuda 
 
 -Visual Studio Code es un editor de código fuente desarrollado por Microsoft. Básicamente te da la posibilidad de escribir y ejecutar código en cualquier lenguaje de programación, esto gracias a sus extensiones y amplia cantidad de opciones.
 
-También hay que mencionar las librerías en Python usadas, siendo ellas: **Pygame**, **Tkinter** y **Matplotlib**. 
+También hay que mencionar las librerías en Python usadas, siendo ellas: **Pygame**, **Tkinter**, **Matplotlib** y **Pillow**. 
 
 -Pygame consiste en una manera sencilla de tratar con sprites y colocarlos en una ventana para crear simulaciones o videojuegos en dos dimensiones. Sus funciones ayudan a la resolución de figuras simples, movimientos que pueden registrar datos, entre otras cosas. En nuestro caso, nos ayudó para crear la simulación de cómo se debería mover un objeto respecto a los ejes de un gráfico con el MRUA.
 
