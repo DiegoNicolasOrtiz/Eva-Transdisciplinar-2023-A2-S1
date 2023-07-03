@@ -36,7 +36,7 @@ La segunda, la **ecuación de la rapidez**.
 
 ![image](https://github.com/DiegoNicolasOrtiz/Eva-Transdisciplinar-2023-A2-S1/assets/134817301/911cdf26-a023-4425-8f3c-bb79f37cd91f)
 
-Y la tercera, la **ecuación de la aceleración**.
+Y la tercera, la **ecuación de la aceleración** (Constante).
 
 La posición del cuerpo en movimiento es clave en el proceso, porque ésta es constantemente modificada.
 
